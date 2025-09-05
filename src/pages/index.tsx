@@ -10,10 +10,11 @@ import {
   FileText,
   Focus,
   Menu,
+  MessageSquare,
   MousePointer,
   Navigation,
+  Quote,
   ScrollText,
-  Search,
   Settings,
   Sliders,
   Sparkles,
@@ -52,8 +53,8 @@ const testCategories = [
         color: "bg-blue-500",
       },
       {
-        href: "/form-submit",
-        label: "Form Submit",
+        href: "/forms",
+        label: "Forms",
         icon: FileInput,
         color: "bg-green-500",
       },
@@ -112,16 +113,16 @@ const testCategories = [
         color: "bg-cyan-500",
       },
       {
-        href: "/navigation",
-        label: "Navigation",
+        href: "/navigation-search",
+        label: "Navigation & Search",
         icon: Navigation,
         color: "bg-emerald-500",
       },
       {
-        href: "/search",
-        label: "Search",
-        icon: Search,
-        color: "bg-violet-500",
+        href: "/interactive",
+        label: "Interactive",
+        icon: MessageSquare,
+        color: "bg-amber-500",
       },
     ],
   },
@@ -186,7 +187,7 @@ export default function Home() {
           </motion.div>
           <div className="mx-auto mt-8 max-w-2xl text-center">
             <p className="text-foreground/80 mb-3 text-2xl font-medium">
-              Introducing Betsey (bTc) — Between the Clicks
+              Introducing Betsey (bTc) — <span className="dark:text-white/90 text-black/80 font-bold">B</span>etween <span className="dark:text-white/90 text-black/80 font-bold">T</span>he <span className="dark:text-white/90 text-black/80 font-bold">C</span>licks
             </p>
             <p className="text-muted-foreground text-xl">
               MCP Automation with Vision and Control.
@@ -258,6 +259,29 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="my-12 flex justify-center"
+        >
+          <Card className="glass w-[30%]">
+            <CardContent className="pt-6">
+              <div className="flex items-start gap-4">
+                <Quote className="h-12 w-12 text-muted-foreground/50 flex-shrink-0" />
+                <div>
+                  <p className="text-muted-foreground text-2xl italic">
+                    We created Betsey (bTc) not only to train our ehAye™ Engine Vision & Control, but because Betsey needs to exist.
+                  </p>
+                  <p className="text-muted-foreground/80 text-sm mt-4">
+                    — Val Neekman @ Neekware Inc.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

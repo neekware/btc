@@ -147,10 +147,10 @@ export default function Hover() {
                   onMouseMove={handleMouseMove}
                   onMouseEnter={() => setHoveredItem("tracker")}
                   onMouseLeave={() => setHoveredItem(null)}
-                  className="relative h-48 w-full overflow-hidden rounded-lg border-2 border-gray-300 bg-gray-100"
+                  className="relative h-48 w-full overflow-hidden rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800"
                 >
                   <div className="p-5">
-                    <p className="mb-2 text-sm text-gray-700">
+                    <p className="mb-2 text-sm text-gray-700 dark:text-gray-300">
                       Move your mouse here
                     </p>
                     <Badge variant="outline">
@@ -248,8 +248,8 @@ export default function Hover() {
                     onMouseLeave={() => setCardHovered(null)}
                     className={`cursor-pointer rounded-xl border-2 p-6 transition-all duration-300 ${
                       cardHovered === num
-                        ? "border-green-400 bg-green-50 shadow-lg"
-                        : "border-gray-200 bg-white hover:shadow-md"
+                        ? "border-green-400 bg-green-50 dark:bg-green-950/50 shadow-lg"
+                        : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-md"
                     }`}
                   >
                     <h3 className="mb-2 text-lg font-semibold">Card {num}</h3>

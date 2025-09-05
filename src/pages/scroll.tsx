@@ -86,7 +86,7 @@ export default function Scroll() {
           </div>
 
           {/* Fixed position scroll indicator */}
-          <Card className="fixed right-4 top-4 z-50 shadow-lg">
+          <Card className="fixed left-4 bottom-4 z-50 shadow-lg dark:bg-gray-900">
             <CardContent className="p-4">
               <div className="space-y-2 text-sm">
                 <div className="flex items-center justify-between">
@@ -199,25 +199,25 @@ export default function Scroll() {
 
           <Card
             id="section1"
-            className="mb-6 min-h-[600px] border-red-200 bg-red-50"
+            className="mb-6 min-h-[600px]"
           >
             <CardHeader>
-              <CardTitle className="text-red-800">
+              <CardTitle className="text-red-800 dark:text-red-200">
                 Section 1: Introduction
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-red-700">
+              <p className="text-red-700 dark:text-red-300">
                 This is the first section. Scroll down to see more content.
               </p>
-              <p className="text-red-700">
+              <p className="text-red-700 dark:text-red-300">
                 The navigation buttons above will highlight as you scroll
                 through sections.
               </p>
               <Button
                 id="section1-next"
                 onClick={() => scrollToElement("section2")}
-                className="mt-4 bg-red-600 hover:bg-red-700"
+                className="mt-4"
               >
                 Go to Section 2 →
               </Button>
@@ -226,18 +226,18 @@ export default function Scroll() {
 
           <Card
             id="section2"
-            className="mb-6 min-h-[600px] border-blue-200 bg-blue-50"
+            className="mb-6 min-h-[600px]"
           >
             <CardHeader>
-              <CardTitle className="text-blue-800">
+              <CardTitle className="text-blue-800 dark:text-blue-200">
                 Section 2: Features
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-blue-700">
+              <p className="text-blue-700 dark:text-blue-300">
                 This section demonstrates smooth scrolling between sections.
               </p>
-              <ul className="list-inside list-disc space-y-2 text-blue-700">
+              <ul className="list-inside list-disc space-y-2 text-blue-700 dark:text-blue-300">
                 <li>Smooth scroll animations</li>
                 <li>Scroll position tracking</li>
                 <li>Section visibility detection</li>
@@ -245,7 +245,7 @@ export default function Scroll() {
               </ul>
               <Button
                 onClick={() => scrollToElement("section3")}
-                className="mt-4 bg-blue-600 hover:bg-blue-700"
+                className="mt-4"
               >
                 Continue to Section 3 →
               </Button>
@@ -254,26 +254,26 @@ export default function Scroll() {
 
           <Card
             id="section3"
-            className="mb-6 min-h-[600px] border-green-200 bg-green-50"
+            className="mb-6 min-h-[600px]"
           >
             <CardHeader>
-              <CardTitle className="text-green-800">
+              <CardTitle className="text-green-800 dark:text-green-200">
                 Section 3: Horizontal Scroll
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-green-700">
+              <p className="text-green-700 dark:text-green-300">
                 This section includes a horizontal scroll area:
               </p>
               <div
                 id="horizontal-scroll"
-                className="flex gap-5 overflow-x-auto rounded-lg border bg-white p-5"
+                className="flex gap-5 overflow-x-auto rounded-lg border bg-white dark:bg-gray-800 p-5"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                   <motion.div
                     key={num}
                     whileHover={{ scale: 1.05 }}
-                    className="flex h-36 min-w-[200px] flex-shrink-0 items-center justify-center rounded-lg text-2xl font-bold text-white"
+                    className="flex h-36 min-w-[200px] flex-shrink-0 items-center justify-center rounded-lg text-2xl font-bold text-white dark:brightness-50"
                     style={{ backgroundColor: `hsl(${num * 45}, 70%, 60%)` }}
                   >
                     Card {num}
@@ -285,16 +285,16 @@ export default function Scroll() {
 
           <Card
             id="section4"
-            className="mb-6 min-h-[600px] border-orange-200 bg-orange-50"
+            className="mb-6 min-h-[600px]"
           >
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-orange-800">
+              <CardTitle className="flex items-center gap-2 text-orange-800 dark:text-orange-200">
                 <Target className="h-5 w-5" />
                 Section 4: Scroll Into View
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-orange-700">
+              <p className="text-orange-700 dark:text-orange-300">
                 Test the scrollIntoView functionality with different options:
               </p>
               <div className="flex flex-wrap gap-3">
@@ -335,40 +335,40 @@ export default function Scroll() {
                   Scroll to Hidden (Bottom)
                 </Button>
               </div>
-              <div className="mt-12 flex h-96 items-center justify-center rounded-lg bg-orange-100">
-                <p className="text-orange-600">Scroll area filler content...</p>
+              <div className="mt-12 flex h-96 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800">
+                <p className="text-orange-600 dark:text-orange-400">Scroll area filler content...</p>
               </div>
               <motion.div
                 id="hidden-element"
                 whileHover={{ scale: 1.02 }}
-                className="rounded-lg bg-green-500 p-5 text-center text-xl font-bold text-white"
+                className="rounded-lg bg-green-500 dark:bg-gray-800 p-5 text-center text-xl font-bold text-white dark:text-green-400"
               >
                 🎯 You found the hidden element!
               </motion.div>
-              <div className="flex h-96 items-center justify-center rounded-lg bg-orange-100">
-                <p className="text-orange-600">More filler content...</p>
+              <div className="flex h-96 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800">
+                <p className="text-orange-600 dark:text-orange-400">More filler content...</p>
               </div>
             </CardContent>
           </Card>
 
           <Card
             id="section5"
-            className="min-h-[600px] border-pink-200 bg-pink-50"
+            className="min-h-[600px]"
           >
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-pink-800">
+              <CardTitle className="flex items-center gap-2 text-pink-800 dark:text-pink-200">
                 <BarChart3 className="h-5 w-5" />
                 Section 5: Conclusion
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-pink-700">
+              <p className="text-pink-700 dark:text-pink-300">
                 This is the final section. You&apos;ve reached the end of the
                 scroll test!
               </p>
 
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-pink-800">
+                <h3 className="mb-3 text-lg font-semibold text-pink-800 dark:text-pink-200">
                   Quick Navigation
                 </h3>
                 <div className="flex gap-3">
