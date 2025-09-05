@@ -4,6 +4,22 @@ export default function Document() {
   return (
     <Html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <Head>
+        {/* Google tag (gtag.js) - Must be first in head per Google requirements */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GC4F593HEQ"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GC4F593HEQ');
+            `,
+          }}
+        />
+
         {/* Favicons */}
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
         <link
