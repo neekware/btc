@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
       enableSystem
       disableTransitionOnChange
     >
+      <GoogleAnalytics />
       <Component {...pageProps} />
       <Toaster />
     </ThemeProvider>
