@@ -26,9 +26,9 @@ function Error({ statusCode }: ErrorProps) {
           </h2>
           <p className="mb-8 text-muted-foreground">
             {statusCode === 404
-              ? "The page you're looking for doesn't exist."
+              ? "The page you&apos;re looking for doesn&apos;t exist."
               : statusCode === 403
-                ? "You don't have permission to access this resource."
+                ? "You don&apos;t have permission to access this resource."
                 : statusCode === 500
                   ? "Something went wrong on our server."
                   : "Something unexpected happened."}
