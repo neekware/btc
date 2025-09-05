@@ -1,0 +1,28 @@
+{
+  "typescript.tsc.autoDetect": "off",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.enablePromptUseWorkspaceTsdk": false,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "files.watcherExclude": {
+    "**/target/**": true,
+    "**/node_modules/**": true,
+    "**/*.js": true,
+    "**/*.js.map": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "search.exclude": {
+    "**/target/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/src/**/*.js": true,
+    "**/src/**/*.js.map": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "files.exclude": {
+    "**/*.js": { "when": "$(basename).ts" },
+    "**/*.js.map": true,
+    "**/src/**/*.js": true,
+    "**/src/**/*.js.map": true,
+    "**/pnpm-lock.yaml": true
+  }
+}
