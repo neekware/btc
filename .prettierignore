@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+*.out
+target/
+src-tauri/target/
+src/tauri/target/
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+Cargo.lock
+
+# IDE and editor files
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.*
+
+# Cache and temp
+.cache/
+.temp/
+tmp/
+temp/
+
+# Generated files
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.js.map
+src-backend/src/bundle.js
+src-backend/src/bundle.js.map
+src-backend/src/**/*.js
+src-backend/src/**/*.js.map
+coverage/
+.nyc_output/
+
+# Rust
+**/*.rs.bk
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
+logs/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Next.js
+.next/
+.vercel/
