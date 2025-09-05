@@ -91,7 +91,7 @@ export default function Scroll() {
               <div className="space-y-2 text-sm">
                 <div className="flex items-center justify-between">
                   <span className="font-medium">Scroll Y:</span>
-                  <Badge variant="outline">{scrollY}px</Badge>
+                  <Badge variant="outline">{scrollY.toFixed(0)}px</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-medium">Progress:</span>
@@ -395,7 +395,7 @@ export default function Scroll() {
                 </h3>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                   <div className="text-center">
-                    <p className="text-2xl font-bold">{scrollY}px</p>
+                    <p className="text-2xl font-bold">{scrollY.toFixed(0)}px</p>
                     <p className="text-muted-foreground text-sm">
                       Scroll Position
                     </p>

@@ -266,7 +266,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="my-12 flex justify-center"
         >
-          <Card className="glass w-[30%]">
+          <Card className="glass w-[90%] md:w-[35%] min-w-[400px]">
             <CardContent className="pt-6">
               <div className="flex items-start gap-4">
                 <Quote className="h-12 w-12 text-muted-foreground/50 flex-shrink-0" />
