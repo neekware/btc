@@ -12,6 +12,8 @@
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
   
   [Live Demo](https://btc.eh-aye.net) | [Documentation](https://docs.eh-aye.net) | [Report Bug](https://github.com/neekware/btc/issues)
+  
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneekware%2Fbtc&project-name=ehaye-btc&repository-name=ehaye-btc)
 </div>
 
 ---
