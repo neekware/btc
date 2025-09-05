@@ -197,10 +197,7 @@ export default function Scroll() {
             </Card>
           </div>
 
-          <Card
-            id="section1"
-            className="mb-6 min-h-[600px]"
-          >
+          <Card id="section1" className="mb-6 min-h-[600px]">
             <CardHeader>
               <CardTitle className="text-red-800 dark:text-red-200">
                 Section 1: Introduction
@@ -224,10 +221,7 @@ export default function Scroll() {
             </CardContent>
           </Card>
 
-          <Card
-            id="section2"
-            className="mb-6 min-h-[600px]"
-          >
+          <Card id="section2" className="mb-6 min-h-[600px]">
             <CardHeader>
               <CardTitle className="text-blue-800 dark:text-blue-200">
                 Section 2: Features
@@ -252,10 +246,7 @@ export default function Scroll() {
             </CardContent>
           </Card>
 
-          <Card
-            id="section3"
-            className="mb-6 min-h-[600px]"
-          >
+          <Card id="section3" className="mb-6 min-h-[600px]">
             <CardHeader>
               <CardTitle className="text-green-800 dark:text-green-200">
                 Section 3: Horizontal Scroll
@@ -283,10 +274,7 @@ export default function Scroll() {
             </CardContent>
           </Card>
 
-          <Card
-            id="section4"
-            className="mb-6 min-h-[600px]"
-          >
+          <Card id="section4" className="mb-6 min-h-[600px]">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-orange-800 dark:text-orange-200">
                 <Target className="h-5 w-5" />
@@ -336,7 +324,9 @@ export default function Scroll() {
                 </Button>
               </div>
               <div className="mt-12 flex h-96 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800">
-                <p className="text-orange-600 dark:text-orange-400">Scroll area filler content...</p>
+                <p className="text-orange-600 dark:text-orange-400">
+                  Scroll area filler content...
+                </p>
               </div>
               <motion.div
                 id="hidden-element"
@@ -346,15 +336,14 @@ export default function Scroll() {
                 🎯 You found the hidden element!
               </motion.div>
               <div className="flex h-96 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800">
-                <p className="text-orange-600 dark:text-orange-400">More filler content...</p>
+                <p className="text-orange-600 dark:text-orange-400">
+                  More filler content...
+                </p>
               </div>
             </CardContent>
           </Card>
 
-          <Card
-            id="section5"
-            className="min-h-[600px]"
-          >
+          <Card id="section5" className="min-h-[600px]">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-pink-800 dark:text-pink-200">
                 <BarChart3 className="h-5 w-5" />

@@ -305,7 +305,9 @@ export default function Forms() {
                               <span className="text-muted-foreground capitalize">
                                 {key.replace(/([A-Z])/g, " $1").trim()}:
                               </span>
-                              <span className="font-medium">{value || "N/A"}</span>
+                              <span className="font-medium">
+                                {value || "N/A"}
+                              </span>
                             </div>
                           ))}
                         </div>
@@ -369,7 +371,9 @@ export default function Forms() {
                             className={errors.username ? "border-red-500" : ""}
                           />
                           {errors.username && (
-                            <p className="text-sm text-red-500">{errors.username}</p>
+                            <p className="text-sm text-red-500">
+                              {errors.username}
+                            </p>
                           )}
                         </div>
 
@@ -388,7 +392,9 @@ export default function Forms() {
                             className={errors.email ? "border-red-500" : ""}
                           />
                           {errors.email && (
-                            <p className="text-sm text-red-500">{errors.email}</p>
+                            <p className="text-sm text-red-500">
+                              {errors.email}
+                            </p>
                           )}
                         </div>
 
@@ -407,7 +413,9 @@ export default function Forms() {
                             className={errors.password ? "border-red-500" : ""}
                           />
                           {errors.password && (
-                            <p className="text-sm text-red-500">{errors.password}</p>
+                            <p className="text-sm text-red-500">
+                              {errors.password}
+                            </p>
                           )}
                         </div>
                       </div>
@@ -452,13 +460,17 @@ export default function Forms() {
                           </SelectContent>
                         </Select>
                         {errors.country && (
-                          <p className="text-sm text-red-500">{errors.country}</p>
+                          <p className="text-sm text-red-500">
+                            {errors.country}
+                          </p>
                         )}
                       </div>
 
                       {/* Switch */}
                       <div className="flex items-center justify-between">
-                        <Label htmlFor="notifications">Email Notifications</Label>
+                        <Label htmlFor="notifications">
+                          Email Notifications
+                        </Label>
                         <Switch
                           id="notifications"
                           checked={complexForm.notifications}
@@ -497,9 +509,7 @@ export default function Forms() {
 
                       {/* Slider */}
                       <div className="space-y-2">
-                        <Label>
-                          Volume: {complexForm.volume[0]}%
-                        </Label>
+                        <Label>Volume: {complexForm.volume[0]}%</Label>
                         <Slider
                           value={complexForm.volume}
                           onValueChange={(value) =>
@@ -604,7 +614,7 @@ export default function Forms() {
                         <div className="flex items-center justify-between">
                           <span>Form Status:</span>
                           <Badge
-                            variant={complexSubmitted ? "success" : "secondary"}
+                            variant={complexSubmitted ? "default" : "secondary"}
                           >
                             {complexSubmitted ? "Submitted" : "Not Submitted"}
                           </Badge>

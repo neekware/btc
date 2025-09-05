@@ -253,9 +253,14 @@ export default function NavigationSearch() {
               </div>
 
               <div className="mt-8 space-y-8">
-                <Card id="section1" className="border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950">
+                <Card
+                  id="section1"
+                  className="border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950"
+                >
                   <CardHeader>
-                    <CardTitle className="text-blue-800 dark:text-blue-200">Section 1</CardTitle>
+                    <CardTitle className="text-blue-800 dark:text-blue-200">
+                      Section 1
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-blue-700 dark:text-blue-300">
@@ -265,9 +270,14 @@ export default function NavigationSearch() {
                   </CardContent>
                 </Card>
 
-                <Card id="section2" className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950">
+                <Card
+                  id="section2"
+                  className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950"
+                >
                   <CardHeader>
-                    <CardTitle className="text-green-800 dark:text-green-200">Section 2</CardTitle>
+                    <CardTitle className="text-green-800 dark:text-green-200">
+                      Section 2
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-green-700 dark:text-green-300">
@@ -277,14 +287,19 @@ export default function NavigationSearch() {
                   </CardContent>
                 </Card>
 
-                <Card id="section3" className="border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950">
+                <Card
+                  id="section3"
+                  className="border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950"
+                >
                   <CardHeader>
-                    <CardTitle className="text-purple-800 dark:text-purple-200">Section 3</CardTitle>
+                    <CardTitle className="text-purple-800 dark:text-purple-200">
+                      Section 3
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-purple-700 dark:text-purple-300">
-                      This is section 3 content, the final section in our navigation
-                      test page.
+                      This is section 3 content, the final section in our
+                      navigation test page.
                     </p>
                   </CardContent>
                 </Card>
@@ -352,7 +367,9 @@ export default function NavigationSearch() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Instant Search</CardTitle>
-                    <CardDescription>Real-time search as you type</CardDescription>
+                    <CardDescription>
+                      Real-time search as you type
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Input
@@ -364,7 +381,9 @@ export default function NavigationSearch() {
                     />
                     {instantResults.length > 0 && (
                       <div className="mt-4">
-                        <h4 className="mb-2 text-sm font-medium">Live Results:</h4>
+                        <h4 className="mb-2 text-sm font-medium">
+                          Live Results:
+                        </h4>
                         <div className="space-y-2">
                           {instantResults.map((result, index) => (
                             <motion.div

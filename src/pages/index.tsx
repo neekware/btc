@@ -187,7 +187,19 @@ export default function Home() {
           </motion.div>
           <div className="mx-auto mt-8 max-w-2xl text-center">
             <p className="text-foreground/80 mb-3 text-2xl font-medium">
-              Introducing Betsey (bTc) — <span className="dark:text-white/90 text-black/80 font-bold">B</span>etween <span className="dark:text-white/90 text-black/80 font-bold">T</span>he <span className="dark:text-white/90 text-black/80 font-bold">C</span>licks
+              Introducing Betsey (bTc) —{" "}
+              <span className="dark:text-white/90 text-black/80 font-bold">
+                B
+              </span>
+              etween{" "}
+              <span className="dark:text-white/90 text-black/80 font-bold">
+                T
+              </span>
+              he{" "}
+              <span className="dark:text-white/90 text-black/80 font-bold">
+                C
+              </span>
+              licks
             </p>
             <p className="text-muted-foreground text-xl">
               MCP Automation with Vision and Control.
@@ -272,7 +284,8 @@ export default function Home() {
                 <Quote className="h-12 w-12 text-muted-foreground/50 flex-shrink-0" />
                 <div>
                   <p className="text-muted-foreground text-2xl italic">
-                    We created Betsey (bTc) not only to train our ehAye™ Engine Vision & Control, but because Betsey needs to exist.
+                    We created Betsey (bTc) not only to train our ehAye™ Engine
+                    Vision & Control, but because Betsey needs to exist.
                   </p>
                   <p className="text-muted-foreground/80 text-sm mt-4">
                     — Val Neekman @ Neekware Inc.
