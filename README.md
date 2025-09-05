@@ -6,12 +6,12 @@
   
   <p>A complete web portal for your AI Automation with Vision and Control</p>
   
-  [![CI](https://github.com/yourusername/btc/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/btc/actions/workflows/ci.yml)
+  [![CI](https://github.com/neekware/btc/actions/workflows/ci.yml/badge.svg)](https://github.com/neekware/btc/actions/workflows/ci.yml)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
   [![Next.js](https://img.shields.io/badge/Next.js-15.5-black.svg)](https://nextjs.org/)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
   
-  [Live Demo](https://btc.eh-aye.net) | [Documentation](https://docs.eh-aye.net) | [Report Bug](https://github.com/yourusername/btc/issues)
+  [Live Demo](https://btc.eh-aye.net) | [Documentation](https://docs.eh-aye.net) | [Report Bug](https://github.com/neekware/btc/issues)
 </div>
 
 ---
@@ -37,7 +37,7 @@ In the world of browser automation, the magic happens between the clicks - the w
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/btc.git
+git clone https://github.com/neekware/btc.git
 cd btc
 
 # Install dependencies
@@ -175,7 +175,7 @@ MIT License - see [LICENSE](LICENSE) for details
 ## 📞 Get in Touch
 
 - 🌐 Website: [eh-aye.net](https://eh-aye.net)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/btc/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/neekware/btc/issues)
 
 ---
 
