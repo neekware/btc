@@ -137,6 +137,8 @@ export default [
   },
   {
     ignores: [
+      ".next/**",
+      "out/**",
       "src-backend/src/bundle.js",
       "src-backend/src/bundle.js.map",
       "cli.mjs",

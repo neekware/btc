@@ -277,8 +277,8 @@ export default function Focus() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 rounded-lg border-2 border-blue-300 bg-blue-50 p-4">
-                  <p className="text-sm text-blue-700">
+                <div className="space-y-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 p-4">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
                     Tab navigation is trapped within this box:
                   </p>
                   <Input
@@ -307,7 +307,7 @@ export default function Focus() {
                         document.getElementById("trap-input-1")?.focus();
                       }
                     }}
-                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    className="w-full"
                   >
                     Last element (Tab goes back to first)
                   </Button>

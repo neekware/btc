@@ -4,6 +4,7 @@ import {
   Brain,
   Code2,
   Eye,
+  Quote,
   Rocket,
   Settings,
   Sparkles,
@@ -297,6 +298,26 @@ export default function About() {
                   Join us in revolutionizing browser automation — one click at a
                   time.
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 mb-8 flex justify-center">
+            <Card className="glass w-[90%] md:w-[35%] min-w-[400px]">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-4">
+                  <Quote className="h-12 w-12 text-muted-foreground/50 flex-shrink-0" />
+                  <div>
+                    <p className="text-muted-foreground text-2xl italic">
+                      We created Betsey (bTc) not only to train our ehAye™
+                      Engine Vision & Control, but because Betsey needs to
+                      exist.
+                    </p>
+                    <p className="text-muted-foreground/80 text-sm mt-4">
+                      — Val Neekman @ Neekware Inc.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>

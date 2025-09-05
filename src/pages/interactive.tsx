@@ -61,6 +61,8 @@ export default function Interactions() {
   const [progress, setProgress] = useState(0);
   const [dialogData, setDialogData] = useState({ name: "", email: "" });
   const [copied, setCopied] = useState(false);
+  const [basicDialogOpen, setBasicDialogOpen] = useState(false);
+  const [formDialogOpen, setFormDialogOpen] = useState(false);
 
   const handleLoadingDemo = () => {
     setLoading(true);
@@ -93,7 +95,7 @@ export default function Interactions() {
   };
 
   const handleNewTab = () => {
-    window.open("https://example.com", "_blank");
+    window.open("/about", "_blank");
   };
 
   const handleFileUpload = () => {
@@ -102,10 +104,19 @@ export default function Interactions() {
     input.onchange = (e: any) => {
       const file = e.target.files[0];
       if (file) {
+        // Simulate upload process
         toast({
-          title: "File Selected",
+          title: "Uploading...",
           description: `${file.name} (${(file.size / 1024).toFixed(2)} KB)`,
         });
+
+        // Simulate successful upload after 1.5 seconds
+        setTimeout(() => {
+          toast({
+            title: "Upload Successful! ✅",
+            description: `${file.name} has been uploaded successfully.`,
+          });
+        }, 1500);
       }
     };
     input.click();
@@ -142,7 +153,10 @@ export default function Interactions() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Dialog>
+                  <Dialog
+                    open={basicDialogOpen}
+                    onOpenChange={setBasicDialogOpen}
+                  >
                     <DialogTrigger asChild>
                       <Button className="w-full">Open Basic Dialog</Button>
                     </DialogTrigger>
@@ -161,12 +175,17 @@ export default function Interactions() {
                         </p>
                       </div>
                       <DialogFooter>
-                        <Button type="submit">Continue</Button>
+                        <Button onClick={() => setBasicDialogOpen(false)}>
+                          Continue
+                        </Button>
                       </DialogFooter>
                     </DialogContent>
                   </Dialog>
 
-                  <Dialog>
+                  <Dialog
+                    open={formDialogOpen}
+                    onOpenChange={setFormDialogOpen}
+                  >
                     <DialogTrigger asChild>
                       <Button variant="secondary" className="w-full">
                         Dialog with Form
@@ -216,7 +235,19 @@ export default function Interactions() {
                         </div>
                       </div>
                       <DialogFooter>
-                        <Button type="submit">Save changes</Button>
+                        <Button
+                          onClick={() => {
+                            // Here you would normally save the data
+                            toast({
+                              title: "Profile Updated",
+                              description:
+                                "Your changes have been saved successfully.",
+                            });
+                            setFormDialogOpen(false);
+                          }}
+                        >
+                          Save changes
+                        </Button>
                       </DialogFooter>
                     </DialogContent>
                   </Dialog>
@@ -495,20 +526,40 @@ export default function Interactions() {
 
                   <Button
                     onClick={() => {
-                      const data = "Hello, World!";
+                      // Create a 100KB text file
+                      const lines = [];
+                      const line =
+                        "This is a test file created by ehAye™ Test Target App (Betsey - bTc). ";
+                      const targetSize = 100 * 1024; // 100KB
+                      let currentSize = 0;
+                      let lineNumber = 1;
+
+                      while (currentSize < targetSize) {
+                        const lineContent = `Line ${lineNumber}: ${line}`;
+                        lines.push(lineContent);
+                        currentSize += lineContent.length + 1; // +1 for newline
+                        lineNumber++;
+                      }
+
+                      const data = lines.join("\n");
                       const blob = new Blob([data], { type: "text/plain" });
                       const url = URL.createObjectURL(blob);
                       const a = document.createElement("a");
                       a.href = url;
-                      a.download = "test-file.txt";
+                      a.download = "test-file-100kb.txt";
                       a.click();
                       URL.revokeObjectURL(url);
+
+                      toast({
+                        title: "Download Started",
+                        description: "Downloading test-file-100kb.txt (100KB)",
+                      });
                     }}
                     className="w-full"
                     variant="outline"
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Download File
+                    Download Test File (100KB)
                   </Button>
                 </CardContent>
               </Card>
