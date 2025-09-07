@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -37,6 +38,13 @@ export default function RadioButtons() {
 
   return (
     <Layout>
+      <Head>
+        <title>Radio Button Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test radio button groups, controlled selections, and various radio button states for comprehensive UI automation testing."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

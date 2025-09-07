@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { ChevronDown, Filter, Globe, RotateCcw } from "lucide-react";
 import { Layout } from "@/components/layout";
@@ -50,6 +51,13 @@ export default function Dropdowns() {
 
   return (
     <Layout>
+      <Head>
+        <title>Dropdown & Select Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test dropdown menus, select components, command palettes, and combo boxes. Complete dropdown testing suite for automation."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

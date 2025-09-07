@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -73,6 +74,13 @@ export default function Clicks() {
 
   return (
     <Layout>
+      <Head>
+        <title>Click Event Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test various click interactions including single, double, and right clicks. Comprehensive click event testing for automation."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

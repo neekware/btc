@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { Eye, MousePointer, Target } from "lucide-react";
 import { Layout } from "@/components/layout";
@@ -47,6 +48,13 @@ export default function Focus() {
 
   return (
     <Layout>
+      <Head>
+        <title>Focus & Blur Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test focus management, tab navigation, and focus trapping. Essential focus state testing for accessibility and automation."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   AlignLeft,
@@ -127,6 +128,13 @@ export default function TextInputs() {
 
   return (
     <Layout>
+      <Head>
+        <title>Text Input Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test various text input types including email, password, search, URL, and phone inputs. Comprehensive form input testing for automation frameworks."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

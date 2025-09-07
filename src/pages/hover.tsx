@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { Info, MousePointer, Navigation, Target, Zap } from "lucide-react";
 import { Layout } from "@/components/layout";
@@ -35,6 +36,13 @@ export default function Hover() {
 
   return (
     <Layout>
+      <Head>
+        <title>Hover Effect Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test hover interactions, tooltips, and mouse tracking. Complete hover state testing for automation frameworks."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Layout } from "@/components/layout";
@@ -8,6 +9,13 @@ export default function Custom404() {
 
   return (
     <Layout>
+      <Head>
+        <title>404 - Page Not Found | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Page not found. The requested page does not exist in the Betsey test target application."
+        />
+      </Head>
       <div className="text-center">
         <h1 className="mb-4 text-6xl font-bold text-primary">404</h1>
         <h2 className="mb-4 text-2xl font-semibold">Page Not Found</h2>

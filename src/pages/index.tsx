@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -133,6 +134,35 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>
+          Betsey (bTc) - Between The Clicks | ehAye™ Test Target App
+        </title>
+        <meta
+          name="description"
+          content="Betsey (bTc) is a comprehensive test target app for AI/MCP training in browser automation and UI interaction. Built to showcase ehAye™ Engine Vision & Control capabilities."
+        />
+        <meta
+          name="keywords"
+          content="Betsey, bTc, ehAye, test automation, browser automation, MCP, UI testing, web automation"
+        />
+        <meta property="og:title" content="Betsey (bTc) - Between The Clicks" />
+        <meta
+          property="og:description"
+          content="A comprehensive test target app for AI/MCP training in browser automation and UI interaction."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://btc.eh-aye.net" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Betsey (bTc) - Between The Clicks"
+        />
+        <meta
+          name="twitter:description"
+          content="Test automation playground for ehAye™ Engine Vision & Control"
+        />
+      </Head>
       {/* Lava Lamp Background */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="animate-float-1 absolute left-[15%] top-[15%] h-20 w-20 rounded-full bg-gradient-to-br from-purple-400/20 to-pink-600/20 blur-3xl md:h-32 md:w-32" />

@@ -1,4 +1,5 @@
 import type { NextPageContext } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,13 @@ interface ErrorProps {
 function Error({ statusCode }: ErrorProps) {
   return (
     <Layout>
+      <Head>
+        <title>{statusCode} Error | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content={`Error ${statusCode}: ${statusCode === 404 ? "Page not found" : statusCode === 500 ? "Server error" : "An error occurred"} in Betsey test target application.`}
+        />
+      </Head>
       <div className="container flex min-h-[80vh] flex-col items-center justify-center">
         <div className="text-center">
           <h1 className="mb-4 text-6xl font-bold text-destructive">

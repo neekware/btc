@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   BarChart,
@@ -42,6 +43,13 @@ export default function Sliders() {
 
   return (
     <Layout>
+      <Head>
+        <title>Slider & Range Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test slider components, range inputs, and progress bars with various configurations for UI automation testing."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

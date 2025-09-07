@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   ArrowDown,
@@ -70,6 +71,13 @@ export default function Scroll() {
 
   return (
     <Layout>
+      <Head>
+        <title>Scroll Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test scroll behaviors, scroll position tracking, and programmatic scrolling. Comprehensive scroll testing for automation."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8 pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

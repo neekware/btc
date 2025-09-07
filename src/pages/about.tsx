@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   Brain,
@@ -27,6 +28,17 @@ import {
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>About Betsey (bTc) | ehAye™ Test Target App</title>
+        <meta
+          name="description"
+          content="Learn about Betsey (bTc), the comprehensive test automation target designed to train and showcase ehAye™ Engine capabilities. Built with modern web technologies."
+        />
+        <meta
+          name="keywords"
+          content="about Betsey, bTc, test automation, ehAye Engine, web testing, automation framework"
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
