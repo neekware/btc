@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   AlertCircle,
@@ -147,6 +148,13 @@ export default function Forms() {
 
   return (
     <Layout>
+      <Head>
+        <title>Form Examples | Betsey (bTc) Test Target</title>
+        <meta
+          name="description"
+          content="Test various form implementations from simple to complex. Features input validation, form submission, and multiple form controls for comprehensive testing."
+        />
+      </Head>
       <motion.div
         initial="initial"
         animate="in"

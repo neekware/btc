@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
@@ -124,6 +125,13 @@ export default function Interactions() {
 
   return (
     <Layout>
+      <Head>
+        <title>Interactive Elements | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test dialogs, popovers, tooltips, and advanced UI interactions. Comprehensive interactive component testing suite."
+        />
+      </Head>
       <TooltipProvider>
         <div className="container mx-auto px-4 py-8">
           <motion.div

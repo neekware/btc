@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { CheckSquare } from "lucide-react";
 import { Layout } from "@/components/layout";
@@ -73,6 +74,13 @@ export default function Checkboxes() {
 
   return (
     <Layout>
+      <Head>
+        <title>Checkbox Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test checkbox components with various states, controlled and uncontrolled modes, and checkbox groups. Perfect for automation testing."
+        />
+      </Head>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

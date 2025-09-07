@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
@@ -90,6 +91,13 @@ export default function NavigationSearch() {
 
   return (
     <Layout>
+      <Head>
+        <title>Navigation & Search Tests | Betsey (bTc)</title>
+        <meta
+          name="description"
+          content="Test navigation methods, search functionality, and URL handling. Complete navigation testing suite for automation."
+        />
+      </Head>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
