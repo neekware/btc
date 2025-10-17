@@ -1,31 +1,9 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
   return (
     <Html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <Head>
-        {/* Google Analytics - Only included if environment variable is set */}
-        {gaMeasurementId && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}');
-                `,
-              }}
-            />
-          </>
-        )}
-
         {/* Favicons */}
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
         <link
