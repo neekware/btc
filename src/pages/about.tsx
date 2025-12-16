@@ -118,9 +118,9 @@ export default function About() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-lg leading-relaxed">
-                  ehAye™ Engine is a next-generation browser automation
-                  platform powered by the Model Context Protocol (MCP). Our
-                  flagship feature, <strong>Betsey (bTc)</strong>
+                  ehAye™ Engine is a next-generation browser automation platform
+                  powered by the Model Context Protocol (MCP). Our flagship
+                  feature, <strong>Betsey (bTc)</strong>
                   operates &ldquo;Between the Clicks,&rdquo; providing a
                   playground for ehAye™ Engine to understand and interact with
                   web applications like a human.

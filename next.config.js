@@ -15,9 +15,6 @@ const nextConfig = {
   experimental: {
     webVitalsAttribution: [],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
