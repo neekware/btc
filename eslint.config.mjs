@@ -19,7 +19,6 @@
 import js from "@eslint/js";
 import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 
@@ -88,7 +87,6 @@ export default [
     },
     plugins: {
       "@typescript-eslint": typescript,
-      react: react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
     },
@@ -110,13 +108,6 @@ export default [
       ],
       "@typescript-eslint/triple-slash-reference": "off", // Next.js auto-generates these
 
-      // React rules
-      ...react.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off", // Not needed with React 17+
-      "react/prop-types": "off", // TypeScript handles this
-      "react/jsx-uses-react": "off",
-      "react/jsx-uses-vars": "error",
-
       // React Hooks rules
       ...reactHooks.configs.recommended.rules,
 
@@ -128,11 +119,6 @@ export default [
       "no-debugger": "error",
       "no-unused-vars": "off", // Use TypeScript's version instead
       "@typescript-eslint/no-unused-expressions": "off", // Disable unused expressions rule
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
     },
   },
   {
